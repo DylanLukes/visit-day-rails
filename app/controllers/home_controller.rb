@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def schedules
-    @people = Person.all
+	  @people = Person.all.order('name ASC')
     @kinds = Person.kinds.keys
   end
 
